@@ -46,7 +46,8 @@ SoftmaxRegression<OptimizerType>::SoftmaxRegression(
     parameters(optimizer.Function().GetInitialPoint()),
     inputSize(optimizer.Function().InputSize()),
     numClasses(optimizer.Function().NumClasses()),
-    lambda(optimizer.Function().Lambda())
+    lambda(optimizer.Function().Lambda()),
+    fitIntercept(optimizer.Function().FitIntercept())
 {
   // Train the model.
   Timer::Start("softmax_regression_optimization");
